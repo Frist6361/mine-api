@@ -8,6 +8,7 @@ from PIL import Image
 import json
 import os
 from pathlib import Path
+import zipfile
 
 app = FastAPI(
     title="Minecraft API",
@@ -86,6 +87,27 @@ def get_skin_image(skin_url: str) -> Image.Image:
     if response.status_code != 200:
         raise HTTPException(status_code=500, detail="Error loading the skin")
     return Image.open(BytesIO(response.content))
+
+def extract_textures():
+    """Unpacking textures from a ZIP file, if necessary"""
+    if not ITEMS_DIR.exists() or not BLOCKS_DIR.exists():
+        zip_path = ICONS_DIR / "textures.zip"
+        if zip_path.exists():
+            print("Unpacking textures from ZIP file...")
+            with zipfile.ZipFile(zip_path, 'r') as zip_ref:
+                zip_ref.extractall(ICONS_DIR)
+            print("Textures successfully unpacked")
+        else:
+            raise Exception("textures.zip file not found in the icons directory")
+
+@app.on_event("startup")
+async def startup_event():
+    """Actions when the server starts"""
+    try:
+        extract_textures()
+    except Exception as e:
+        print(f"Error when unpacking textures: {str(e)}")
+        raise
 
 @app.get("/")
 async def read_root():
