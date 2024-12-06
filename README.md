@@ -1,6 +1,7 @@
 
 # Minecraft API
-![5fe56758-0c7e-4223-afd3-140bc0173b17](https://github.com/user-attachments/assets/33dbb4d5-3f57-47ab-9d40-4eb3d5fe46ed) ![9b14c44e-94a6-4c24-9640-a66f7bb34b06](https://github.com/user-attachments/assets/afbb6a6f-bc6c-405b-84ea-398c4387a801)
+![5fe56758-0c7e-4223-afd3-140bc0173b17](https://github.com/user-attachments/assets/33dbb4d5-3f57-47ab-9d40-4eb3d5fe46ed) ![9b14c44e-94a6-4c24-9640-a66f7bb34b06](https://github.com/user-attachments/assets/afbb6a6f-bc6c-405b-84ea-398c4387a801) ![image](https://github.com/user-attachments/assets/ee1c66e5-1d92-4363-a3e0-00166d4519d7)
+
 
 
 An API for retrieving Minecraft player skins and item images.
