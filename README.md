@@ -1,4 +1,4 @@
-# Minecraft Skin & Items API
+# Minecraft API
 
 An API for retrieving Minecraft player skins and item images.
 
@@ -6,8 +6,8 @@ An API for retrieving Minecraft player skins and item images.
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/Frist6361/minecraft-api.git
-cd minecraft-skin-api
+git clone https://github.com/Frist6361/mine-api.git
+cd mine-skin-api
 ```
 
 2. Install dependencies:
